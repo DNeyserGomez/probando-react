@@ -8,12 +8,14 @@ import Home from './components/home/Home';
 class App extends Component {
   render() {
     return (
-      <div class="row">
-        <div class="col m6">
-          
-          <Home />
-        </div>
-        <div class="col m6">
+      <div className="App">
+        <div class="row">
+          <div class="col m6">
+            
+            <Home />
+          </div>
+          <div class="col m6">
+          </div>
         </div>
       </div>
     );

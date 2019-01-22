@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 
 const User = ( props ) => (
-    <ul class="collection">
         <li class="collection-item">{props.name} {props.last}</li>
-    </ul>
 )
 
 class Home extends Component {
@@ -31,7 +29,7 @@ class Home extends Component {
         console.log( this.state.users.length )
         if( this.state.users.length > 0 ) {
             return(
-                <div>{ this.state.users.map(user => <User name={user.name} last={user.last} />) }</div>
+                <div><ul class="collection">{ this.state.users.map(user => <User name={user.name} last={user.last} />) }</ul></div>
             )
         }
         return(<p>Cargando Usuarios...</p>)
