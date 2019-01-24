@@ -9,6 +9,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        
         <div class="row">
           <div class="col s12 m6 hide-on-small-only">
             <Home />

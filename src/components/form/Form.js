@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import * as M from 'materialize-css';
+import Home from '../home/Home';
 class Form extends Component {
     constructor(props) {
         super(props);
         this.state = { question_text: '', pub_date: ''};
 
         this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this)
     }
 
     handleChange(event) {
@@ -32,10 +33,17 @@ class Form extends Component {
                 console.log(data)
                 M.toast({html: 'Question and answer saved'});
                 this.setState({question: '', answer: ''});
+                window.location.reload();
             })	
             .catch(err => console.log(err));
     }
-
+    /*fetchDates() {
+        fetch('http://10.0.2.167:8000/polls')
+            .then(response => response.json())
+            .then(data => {
+                this.setState({ users: data })
+        })
+    }*/
     render() {
         return(
             <div>
