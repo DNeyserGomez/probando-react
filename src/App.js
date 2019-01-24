@@ -9,6 +9,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <nav className="hide-on-med-and-down">
+          <div class="nav-wrapper light-green">
+          </div>
+        </nav>
         
         <div class="row">
           <div class="col s12 m6 hide-on-small-only">

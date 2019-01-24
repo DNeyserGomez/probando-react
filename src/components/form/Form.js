@@ -47,26 +47,28 @@ class Form extends Component {
     render() {
         return(
             <div>
+                <div className="card col m6 s12 z-depth-3">
                 <form id="formreceived" onSubmit={this.handleSubmit}>
                     <div className="row">
-                        <div className="input-field col s12 m6">
+                        <div className="input-field col s12 m12">
                             <input name="question_text" value={this.state.question} onChange={this.handleChange} placeholder="Enter question" id="question" type="text" className="validate"/>
                             <label for="question">Do you have any question?</label>
                         </div>
                     </div>
                     <div className="row">
-                        <div className="input-field col s12 m6">
+                        <div className="input-field col s12 m12">
                             <input name="pub_date" value={this.state.answer} onChange={this.handleChange} placeholder="Enter answer" id="answer" type="text" className="validate"/>
                             <label for="answer">Enter answer here!</label>
                         </div>
                     </div>
 
                     <div className="row">
-                        <div className="col m2">
-                            <button className="waves-effect waves-light btn" type="submit" value="Submit">Send</button>
+                        <div className="col s12 m12">
+                            <button className="waves-effect waves-light btn col s12 m12  deep-purple darken-4" type="submit" value="Submit">Send</button>
                         </div>
                     </div>
                 </form>
+                </div>
             </div>
         )
     }

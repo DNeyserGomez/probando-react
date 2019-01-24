@@ -11,8 +11,25 @@ class Home extends Component {
             users: []
         }
     }
+    fetchDate(){
+        return(
+            fetch('http://10.0.2.167:8000/polls')
+                .then(response => response.json())
+                .then(users => {
+                    users.results.forEach(user => {
+                        let data = {
+                            question:user.question_text,
+                            pubdate:user.pub_date,
+                        }
+                        this.setState({ users:this.state.users.concat([data]) })
+                    })
+            })
+        );
+        
+    }
     componentDidMount() {
-        fetch('http://10.0.2.167:8000/polls')
+        this.fetchDate();
+        /*fetch('http://10.0.2.167:8000/polls')
             .then(response => response.json())
             .then(users => {
                 users.results.forEach(user => {
@@ -22,7 +39,7 @@ class Home extends Component {
                     }
                     this.setState({ users:this.state.users.concat([data]) })
                 })
-        })
+        })*/
     }
 
     render() {

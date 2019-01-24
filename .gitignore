@@ -5,6 +5,9 @@
 /.pnp
 .pnp.js
 
+#cordova dependencies
+/platforms
+
 # testing
 /coverage
 
